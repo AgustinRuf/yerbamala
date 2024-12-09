@@ -1,0 +1,28 @@
+footer{
+    background-color: #7aa05e;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2{
+        img{
+            height: 230px;
+        }
+    }
+    p{
+        font-size: 25px;
+        text-align: justify;
+        width: 45%;
+    }
+    div{
+        a{
+            img{
+                width: 40px;
+                height: 40px;
+                display: flex;
+                flex-direction: column;
+                margin: 7px;
+            }
+        }
+    }
+}
