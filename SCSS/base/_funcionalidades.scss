@@ -1,0 +1,24 @@
+/*!-----------Variables--------------*/
+$color-1: #389303;
+$color-2: #FAE7C8;
+$color-3: black;
+$color-4: #58b422;
+$color-5: #7aa05e;
+
+/*!-----------Listas--------------*/
+$font-size: 75px, 45px, 40px, 35px, 30px, 20px, 15px;
+
+/*!-----------Extend--------------*/
+%boton{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+/*!-----------Mixin--------------*/
+@mixin flex ($flex, $center, $align){
+    display: $flex;
+    justify-content: $center;
+    align-items: $align;
+}
+

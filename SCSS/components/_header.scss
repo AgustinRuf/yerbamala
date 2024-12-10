@@ -1,5 +1,5 @@
 header{
-    background-color:#7aa05e;
+    background-color: $color-5;
     padding: 12px;
     display: flex;
     align-items: center;
@@ -18,16 +18,16 @@ header{
             gap: 7px;
         }
             li{
-                font-size: 30px;
+                font-size: nth($font-size, 5);
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
                 a{
                     text-decoration: none;
-                    color: black;
+                    color: $color-3;
                     &:hover{
-                        color: #389303;
+                        color: $color-1;
                     }
                 }
                 &:nth-child(1){

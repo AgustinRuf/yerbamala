@@ -1,5 +1,15 @@
 @charset "UTF-8";
+/*!-----------Variables--------------*/
+/*!-----------Listas--------------*/
+/*!-----------Extend--------------*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+main .productos .productos-contenedor div a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+/*!-----------Mixin--------------*/
 * {
   margin: 0;
   padding: 0;
@@ -149,9 +159,8 @@ main .productos h2 {
 }
 main .productos .productos-contenedor {
   display: flex;
-  justify-content: center;
-  align-items: center;
   justify-content: space-evenly;
+  align-items: center;
   flex-wrap: wrap;
 }
 main .productos .productos-contenedor div {
@@ -165,11 +174,6 @@ main .productos .productos-contenedor div {
 main .productos .productos-contenedor div img {
   width: 100%;
   height: auto;
-}
-main .productos .productos-contenedor div a {
-  text-decoration: none;
-  color: black;
-  font-size: 15px;
 }
 main .productos .productos-contenedor div a:hover {
   background-color: #58b422;
@@ -223,7 +227,7 @@ main .catalogo {
 main .catalogo h2 {
   text-align: center;
   color: #389303;
-  font-size: 40px;
+  font-size: 35px;
   background-color: black;
   padding: 10px;
   width: 100%;
@@ -343,7 +347,7 @@ main .autores .autores-contenedor div .texto-encima {
 }
 main .autores .autores-contenedor div .texto-encima h3 {
   font-size: 40px;
-  color: #65df1e;
+  color: #7aa05e;
 }
 main .autores .autores-contenedor div .texto-encima:hover {
   opacity: 1;
@@ -367,11 +371,11 @@ main .suscribite {
   align-items: center;
 }
 main .suscribite h2 {
-  color: #58b422;
+  color: #FAE7C8;
   font-size: 80px;
 }
 main .suscribite p {
-  color: #58b422;
+  color: #FAE7C8;
   font-size: 40px;
 }
 main .encuentros-autores h2 {
@@ -576,6 +580,88 @@ footer div a img {
 @media screen and (max-width: 578px) {
   main .nosotros img {
     width: 300px;
+  }
+}
+/*!-----------MEDIA QUERIES catálogo--------------*/
+@media screen and (max-width: 961px) {
+  main .catalogo .libros {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  main .catalogo .libros div {
+    width: 100%;
+    max-width: none;
+    border: 2px rgb(0, 0, 0);
+    width: 200px;
+    height: 400px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(24, 34, 26, 0.507);
+    flex-grow: 1;
+  }
+  main .catalogo .libros div img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+@media screen and (max-width: 757px) {
+  main .catalogo .libros {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  main .catalogo .libros div {
+    width: 100%;
+    max-width: none;
+    border: 2px rgb(0, 0, 0);
+    width: 200px;
+    height: 400px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(24, 34, 26, 0.507);
+    flex-grow: 1;
+  }
+  main .catalogo .libros div img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+@media screen and (max-width: 495px) {
+  main .catalogo .libros {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+  main .catalogo .libros div {
+    width: 100%;
+    max-width: none;
+    border: 2px rgb(0, 0, 0);
+    width: 200px;
+    height: 400px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(24, 34, 26, 0.507);
+    flex-grow: 1;
+  }
+  main .catalogo .libros div img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
 

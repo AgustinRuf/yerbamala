@@ -12,12 +12,12 @@ main{
         background-attachment: fixed;
         background-size: cover;
         h2{
-            color: #FAE7C8;
-            font-size: 75px;
+            color: $color-2;
+            font-size: nth($font-size, 1);
         }
         p{
-            color: #FAE7C8;
-            font-size: 45px;
+            color: $color-2;
+            font-size: nth($font-size, 2);
             font-weight: 50px;
         }
         img{
@@ -36,12 +36,12 @@ main{
             justify-content: center;
             align-items: center;
             h2{
-                color: #389303;
-                font-size: 40px;
+                color: $color-1;
+                font-size: nth($font-size, 3);
             }
             p{
-                color: black;
-                font-size: 30px;
+                color: $color-3;
+                font-size: nth($font-size, 5);
                 font-weight: 25;
                 text-align: justify;
             }
@@ -58,12 +58,12 @@ main{
             width: 25%;
             align-items: center;
             h2{
-                color: #389303;
-                font-size: 40px;
+                color: $color-1;
+                font-size: nth($font-size, 3);
             }
             p{
-                color: black;
-                font-size: 30px;
+                color: $color-3;
+                font-size: nth($font-size, 5);
                 text-align: justify;
             }
         }
@@ -71,19 +71,16 @@ main{
     .productos{
         h2{
             text-align: center;
-            color: #389303;
-            font-size: 40px;
-            background-color: black;
+            color: $color-1;
+            font-size: nth($font-size, 3);
+            background-color: $color-3;
             padding: 10px;
         }
         .productos-contenedor{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            justify-content: space-evenly;
+            @include flex(flex, space-evenly, center);
             flex-wrap: wrap;
             div{
-                border: 2px solid black;
+                border: 2px solid $color-3;
                 width: 200px;
                 margin: 20px;
                 padding: 5px;
@@ -94,11 +91,9 @@ main{
                     height: auto;
                 }
                 a{
-                    text-decoration: none;
-                    color: black;
-                    font-size: 15px;                
+                    @extend %boton;
                     &:hover{
-                        background-color: #58b422;
+                        background-color: $color-4;
                     }
                 }    
             }
@@ -116,13 +111,13 @@ main{
         justify-content: space-evenly;
         margin: 30px;
         div{
-            font-size: 35px;
+            font-size: nth($font-size, 4);
             text-align: center;
             h2{
-                color: #389303;
+                color: $color-1;
             }
             p{
-                color: black
+                color: $color-3;
             }
         }
         img{
@@ -136,10 +131,10 @@ main{
         align-items: center;
         margin-bottom: 30px;
         h2{
-            color: #389303;
-            font-size: 35px;
+            color: $color-1;
+            font-size: nth($font-size, 4);
             margin-bottom: 10px;
-            background-color: black;
+            background-color: $color-3;
             width: 100%;
             text-align: center;
             padding: 10px;
@@ -157,15 +152,15 @@ main{
         flex-direction: column;
         h2{
             text-align: center;
-            color: #389303;
-            font-size: 40px;
-            background-color: black;
+            color: $color-1;
+            font-size: nth($font-size, 4);
+            background-color: $color-3;
             padding: 10px;
             width: 100%;
         }
         p{
-            color: black;
-            font-size: 35px;
+            color: $color-3;
+            font-size: nth($font-size, 4);
             text-align: center;
             margin: 20px;
         }
@@ -188,7 +183,7 @@ main{
                 justify-content: space-between; 
                 box-shadow: 0 4px 6px rgba(3, 92, 15, 0.507);
                 h3{
-                    font-size: 20px;
+                    font-size: nth($font-size, 6);
                 }
                 img{
                     width: 100%;
@@ -196,10 +191,10 @@ main{
                 }
                 a{
                     text-decoration: none;
-                    color: black;
-                    font-size: 15px;
+                    color: $color-3;
+                    font-size: nth($font-size, 7);
                         &:hover{
-                            background-color: #389303;
+                            background-color: $color-1;
                             transform: scale(1.05)
                         }
                 }
@@ -214,17 +209,17 @@ main{
     .autores{
         h2{
             text-align: center;
-            color: #389303;
-            font-size: 40px;
-            background-color: black;
+            color: $color-1;
+            font-size: nth($font-size, 3);
+            background-color: $color-3;
             padding: 10px;
             width: 100%;
     }
         p{
         text-align: center;
-        color: black;
+        color: $color-3;
         margin: 20px;
-        font-size: 35px;
+        font-size: nth($font-size, 4);
     }
     .autores-contenedor{
         display: grid;
@@ -267,8 +262,8 @@ main{
             opacity: 0;
             transition: opacity 0.3s ease;
             h3{
-                font-size: 40px;
-                color: #65df1e;
+                font-size: nth($font-size, 3);
+                color: $color-5;
             }
             &:hover {
                 opacity: 1;
@@ -298,23 +293,23 @@ main{
         justify-content: center;
         align-items: center;
         h2{
-            color: #58b422;
+            color: $color-2;
             font-size: 80px;
         }
         p{
-            color: #58b422;
-            font-size: 40px;
+            color: $color-2;
+            font-size: nth($font-size, 3);
         }
     }
     .encuentros-autores{
         h2{
-            color: #389303;
-            font-size: 40px;
+            color: $color-1;
+            font-size: nth($font-size, 3);
             text-align: center;
         }
         p{
             text-align: center;
-            color: black;
+            color: $color-3;
         }
     }
 }
