@@ -35,15 +35,18 @@
     }
 }
 
-@media screen and (max-width:919px){
-
+@media screen and (max-width:1038px){
     header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
     }
+}
 
+
+
+@media screen and (max-width:919px){
     main .bienvenida{
         display: flex;
         flex-direction: column;
@@ -56,6 +59,36 @@
         width: 100%
     }
     
+}
+
+@media screen and (max-width:864px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav ul li{
+        font-size: 25px;
+    }
+
+    header img{
+        height: 150px;
+    }
+
+    footer img{
+        height: 150px;
+    }
+
+    footer p{
+        font-size: 20px;
+    }
+
+    footer div a img{
+        width: 30px;
+        height: 30px;
+    }
+
 }
 
 @media screen and (max-width:803px){
@@ -83,62 +116,74 @@
     }
 }
 
-@media screen and (max-width:679px){
-    header nav ul{
-        list-style: none;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 2px;
-    }
-    
+@media screen and (max-width:727px){
     header nav ul li{
-        font-size: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        font-size: 20px;
     }
-    
-    header nav ul li:nth-child(1){
-        grid-column: 1;
-        grid-row: 1;
+
+    header img{
+        height: 140px;
     }
-    
-    header nav ul li:nth-child(2){
-        grid-column: 1;
-        grid-row: 3;
+
+    footer img{
+        height: 140px;
     }
-    
-    header nav ul li:nth-child(3){
-        grid-column: 2;
-        grid-row: 2;
-    }
-    
-    header nav ul li:nth-child(4){
-        grid-column: 3;
-        grid-row: 1;
-    }
-    
-    header nav ul li:nth-child(5){
-        grid-column: 3;
-        grid-row: 3;
-    }
-    
 }
 
-@media screen and (max-width:465px){
-    header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
+@media screen and (max-width:613px){
+    header nav ul li{
+        font-size: 17px;
     }
 
-    header h1 img{
-        height: 90px;
+    header img{
+        height: 130px;
     }
 
+    footer img{
+        height: 130px;
+    }
+}
+
+@media screen and (max-width:553px){
+    header nav ul li{
+        font-size: 15px;
+    }
+
+    header img{
+        height: 100px;
+    }
+
+    footer img{
+        height: 100px;
+    }
+
+    footer p{
+        font-size: 15px;
+    }
+
+    footer div a img{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width:473px){
+    header nav ul li{
+        font-size: 12px;
+    }
+
+    header img{
+        height: 80px;
+    }
+
+    footer img{
+        height: 80px;
+    }
+
+    footer p{
+        font-size: 13px;
+    }
+    
     main .hero h2{
         color: #FAE7C8;
         font-size: 30px;
@@ -149,36 +194,38 @@
         font-size: 20px;
         font-weight: 30px;
     }
-
-    header nav ul{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        justify-content: space-between;
 }
 
-    header nav ul li{
-        margin: 7px;
-        font-size: 20px;
+@media screen and (max-width:465px){
+    main .hero h2{
+        color: #FAE7C8;
+        font-size: 30px;
     }
-
-    footer{
-        flex-wrap: wrap;
+        
+    main .hero p{
+        color: #FAE7C8;
+        font-size: 20px;
+        font-weight: 30px;
     }
 }
 
 /*!-----------MEDIA QUERIES actividades--------------*/
 
-@media screen and (max-width: 523px){
+@media screen and (max-width: 960px){
     main .suscribite h2{
-        color: #58b422;
-        font-size: 40px;
+        font-size: 50px;
     }
     
     main .suscribite p{
-        color: #58b422;
         font-size: 30px;
+    }
+
+    main .encuentros-autores h2{
+        font-size: nth($font-size, 5);
+    }    
+    
+    main .encuentros-autores p{
+        font-size: nth($font-size, 6);
     }
 }
 
@@ -198,7 +245,7 @@
     
     main .nosotros img{
         width: 500px;
-}
+    }
 }
 
 @media screen and (max-width: 578px){
@@ -263,6 +310,10 @@
         height: auto;
         object-fit: contain;
     }      
+
+    main .catalogo p{
+        font-size: 25px;
+    }
 }
 
 @media screen and (max-width: 495px){
@@ -291,4 +342,24 @@
         height: auto;
         object-fit: contain;
     }      
+}
+
+/*!-----------MEDIA QUERIES Autores--------------*/
+
+@media screen and (max-width:883px){
+    main .autores .autores-contenedor div .texto-encima h3{
+        font-size: nth($font-size, 4);
+    }
+}
+
+@media screen and (max-width:579px){
+    main .autores .autores-contenedor div .texto-encima h3{
+        font-size: nth($font-size, 5);
+    }
+}
+
+@media screen and (max-width:557px){
+    main .autores .autores-contenedor div .texto-encima h3{
+        font-size: nth($font-size, 6);
+    }
 }

@@ -4,15 +4,14 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    h2{
-        img{
-            height: 230px;
-        }
+    img{
+        height: 200px;
     }
     p{
         font-size: 25px;
         text-align: justify;
         width: 45%;
+        color: $color-3;
     }
     div{
         a{

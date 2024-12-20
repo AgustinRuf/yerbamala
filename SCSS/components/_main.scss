@@ -11,14 +11,14 @@ main{
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
-        h2{
+        h1{
             color: $color-2;
             font-size: nth($font-size, 1);
         }
         p{
             color: $color-2;
             font-size: nth($font-size, 2);
-            font-weight: 50px;
+            font-weight: 55px;
         }
         img{
             width: 500px;
@@ -80,12 +80,19 @@ main{
             @include flex(flex, space-evenly, center);
             flex-wrap: wrap;
             div{
-                border: 2px solid $color-3;
+                border: 2px $color-3;
                 width: 200px;
                 margin: 20px;
                 padding: 5px;
                 text-align: center;
                 overflow: hidden;
+                box-shadow: 0 4px 6px rgba(3, 92, 15, 0.507);
+                    h3{
+                        font-size: nth($font-size, 6);
+                        span{
+                            color: $color-1;
+                        }
+                    }
                 img{
                     width: 100%;
                     height: auto;
@@ -113,7 +120,7 @@ main{
         div{
             font-size: nth($font-size, 4);
             text-align: center;
-            h2{
+            h1{
                 color: $color-1;
             }
             p{
@@ -150,7 +157,7 @@ main{
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
-        h2{
+        h1{
             text-align: center;
             color: $color-1;
             font-size: nth($font-size, 4);
@@ -182,8 +189,11 @@ main{
                 flex-direction: column;
                 justify-content: space-between; 
                 box-shadow: 0 4px 6px rgba(3, 92, 15, 0.507);
-                h3{
+                h2{
                     font-size: nth($font-size, 6);
+                        span{
+                            color: $color-1
+                        }
                 }
                 img{
                     width: 100%;
@@ -207,7 +217,7 @@ main{
 
 main{
     .autores{
-        h2{
+        h1{
             text-align: center;
             color: $color-1;
             font-size: nth($font-size, 3);
@@ -221,56 +231,56 @@ main{
         margin: 20px;
         font-size: nth($font-size, 4);
     }
-    .autores-contenedor{
-        display: grid;
-        grid-template-areas: 
-            "mariana mariana felisberto"
-            "donoso donoso felisberto"
-            "puig puig samanta"
-            "wilde wilde samanta"
-            "monica silvina silvina"
-            "monica truman truman";
-        margin-bottom: 20px;
-        div{
-            position: relative;
-            overflow: hidden;
-            &:nth-child(1) { grid-area: mariana; }
-            &:nth-child(2) { grid-area: felisberto; }
-            &:nth-child(3) { grid-area: donoso; }
-            &:nth-child(4) { grid-area: puig; }
-            &:nth-child(5) { grid-area: samanta; }
-            &:nth-child(6) { grid-area: wilde; }
-            &:nth-child(7) { grid-area: monica; }
-            &:nth-child(8) { grid-area: silvina; }
-            &:nth-child(9) { grid-area: truman; }
-            img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        .texto-encima{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            h3{
-                font-size: nth($font-size, 3);
-                color: $color-5;
-            }
-            &:hover {
-                opacity: 1;
-            }
-        }
-        &:hover img {
-            transform: scale(1.1); /* Efecto de zoom */
+        .autores-contenedor{
+            display: grid;
+            grid-template-areas: 
+                "mariana mariana felisberto"
+                "donoso donoso felisberto"
+                "puig puig samanta"
+                "wilde wilde samanta"
+                "monica silvina silvina"
+                "monica truman truman";
+            margin-bottom: 20px;
+            div{
+                position: relative;
+                overflow: hidden;
+                &:nth-child(1) { grid-area: mariana; }
+                &:nth-child(2) { grid-area: felisberto; }
+                &:nth-child(3) { grid-area: donoso; }
+                &:nth-child(4) { grid-area: puig; }
+                &:nth-child(5) { grid-area: samanta; }
+                &:nth-child(6) { grid-area: wilde; }
+                &:nth-child(7) { grid-area: monica; }
+                &:nth-child(8) { grid-area: silvina; }
+                &:nth-child(9) { grid-area: truman; }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.3s ease;
+                }
+                .texto-encima{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    h2{
+                        font-size: nth($font-size, 3);
+                        color: rgb(73, 245, 73)
+                    }
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                    &:hover img {
+                    transform: scale(1.1);
                 }
             }
         }
@@ -292,7 +302,8 @@ main{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        h2{
+        margin-bottom: 50px;
+        h1{
             color: $color-2;
             font-size: 80px;
         }
@@ -302,14 +313,17 @@ main{
         }
     }
     .encuentros-autores{
+        padding: 20px;
+        margin-top: 5px;
         h2{
             color: $color-1;
-            font-size: nth($font-size, 3);
+            font-size: nth($font-size, 2);
             text-align: center;
         }
         p{
             text-align: center;
             color: $color-3;
+            font-size: nth($font-size, 4);
         }
     }
 }
